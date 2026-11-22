@@ -126,7 +126,7 @@ def page_rows(page, words, band, end_y):
 
     if bounds:
         def interval(w):
-            k = bisect.bisect_right(bounds,(w["top"]+w["bottom])/2)-1
+            k = bisect.bisect_right(bounds,(w["top"]+w["bottom"])/2)-1
             return k if 0<=k<len(bounds)-1 else None
         per = [interval(a) for a in anchors]
         if None not in per and len(set(per)) == len(per):
